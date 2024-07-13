@@ -1,18 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NDVI Visualization - Chillan, Chile</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/eegeo.js@0.0.2"></script>
-  <script src="https://earthengine.googleapis.com/api.js?onload=initMap"></script>
+    <title>Sentinel-2 SR Visualizer</title>
+    <!-- Load Earth Engine API -->
+    <script src="https://cdn.jsdelivr.net/npm/@google/earthengine"></script>
 </head>
 <body>
-  <!-- Your website content goes here -->
-  <div id="map" style="height: 500px;"></div>
+    <div id="map" style="width: 100%; height: 500px;"></div>
+    <div id="control-panel">
+        <label for="point-button">1. Select a point on the map:</label>
+        <button id="point-button">Indicate Point on Map</button><br>
+        <label for="end-date">2. Select end date:</label>
+        <input type="date" id="end-date" value="2024-03-12"><br>
+        <label for="time-range">3. Select time range:</label>
+        <select id="time-range">
+            <option value="1week">1 week</option>
+            <option value="1month">1 month</option>
+            <option value="3months">3 months</option>
+            <option value="6months">6 months</option>
+        </select><br>
+        <label for="cloud-cover">4. Select max cloud cover percentage:</label>
+        <input type="range" id="cloud-cover" min="0" max="100" value="60"><br>
+        <button id="search-button">Search for Scenes</button>
+    </div>
 
-  <!-- Include your custom JavaScript file -->
-  <script src="script.js"></script>
+    <div id="image-cards"></div>
+
+    <script src="app.js"></script>
 </body>
 </html>

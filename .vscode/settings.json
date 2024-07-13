@@ -1247,7 +1247,7 @@
 	//  - side: Show the Activity Bar to the side of the Primary Side Bar.
 	//  - top: Show the Activity Bar on top of the Primary Side Bar.
 	//  - hidden: Hide the Activity Bar.
-	"workbench.activityBar.location": "side",
+	"workbench.activityBar.location": "default",
 
 	// Controls whether to automatically resume available working changes stored in the cloud for the current workspace.
 	//  - onReload: Automatically resume available working changes from the cloud on window reload.
@@ -2163,9 +2163,6 @@
 
 	// Show notebook editor rich content results for closed notebooks. Please refresh your search results after changing this setting.
 	"search.experimental.closedNotebookRichContentResults": false,
-
-	// Controls whether the last typed input to Quick Search should be restored when opening it the next time.
-	"search.experimental.quickAccess.preserveInput": false,
 
 	// Controls whether to follow symlinks while searching.
 	"search.followSymlinks": true,
@@ -5637,12 +5634,6 @@
 		"sound": "auto"
 	},
 
-	// Plays a signal on loop while the response is pending.
-	"accessibility.signals.chatResponsePending": {
-		"announcement": "auto",
-		"sound": "auto"
-	},
-
 	// Indicates when the response has been received.
 	"accessibility.signals.chatResponseReceived": {
 		"sound": "off"
@@ -5653,9 +5644,6 @@
 		"announcement": "auto",
 		"sound": "auto"
 	},
-
-	// Whether or not position changes should be debounced
-	"accessibility.signals.debouncePositionChanges": false,
 
 	// Indicates when the focus moves to an deleted line in Accessible Diff Viewer mode or to the next/previous change.
 	"accessibility.signals.diffLineDeleted": {
@@ -5736,9 +5724,6 @@
 		"announcement": "always",
 		"sound": "never"
 	},
-
-	// The volume of the sounds in percent (0-100).
-	"accessibility.signals.sounds.volume": null,
 
 	// Plays a signal when a task is completed.
 	"accessibility.signals.taskCompleted": {
@@ -6338,5 +6323,10 @@
 
 	// Enable/disable the floating indicator that shows when focused in the simple browser.
 	"simpleBrowser.focusLockIndicator.enabled": true,
+	"accessibility.signals.progress": {
+		"announcement": "auto",
+		"sound": "auto"
+	},
+	"search.quickAccess.preserveInput": false,
 
 }
